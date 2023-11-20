@@ -19,9 +19,13 @@ public:
         strcpy(this->name, name);
     }
 };
-void compare_student(Student *st1, Student *st2)
+// void compare_student(Student *st1, Student *st2)
+// {
+//     cout << (st1->age > st2->age ? st1->name : st2->name) << " Younger" << endl;
+// }
+Student *compare_student(Student *st1, Student *st2)
 {
-    cout << (st1->age > st2->age ? st1->name : st2->name) << " Younger" << endl;
+    return st1->age > st2->age ? st1 : st2;
 }
 int main()
 {
@@ -32,11 +36,12 @@ int main()
     cin.getline(name, 100);
     Student *mukta = new Student(id, age, name);
     Student *proma = new Student();
-    proma->age = 23;
+    proma->age = 223;
     proma->id = 637;
     strcpy(proma->name, "Proma");
-
-    compare_student(mukta, proma);
+    // compare_student(mukta, proma);
+    Student *younger = compare_student(mukta, proma);
+    cout << younger->name << " is Younger" << endl;
     // cout
     //     << (*mukta).id << " "
     //     << (*mukta).age << " "
