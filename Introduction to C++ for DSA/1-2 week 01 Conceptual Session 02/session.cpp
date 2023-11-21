@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 class Student
 {
@@ -20,10 +19,6 @@ public:
         strcpy(this->name, name);
     }
 };
-// void compare_student(Student *st1, Student *st2)
-// {
-//     cout << (st1->age > st2->age ? st1->name : st2->name) << " Younger" << endl;
-// }
 Student *compare_student(Student *st1, Student *st2)
 {
     return st1->age > st2->age ? st1 : st2;
@@ -31,11 +26,14 @@ Student *compare_student(Student *st1, Student *st2)
 
 Student *make_student()
 {
-    Student st;
-    st.age = 50;
-    Student *pst = &st;
-    // cout << &st << endl;
-    return pst;
+    Student *st = new Student();
+    st->age = 50;
+    return st;
+    // Student st;
+    // st.age = 50;
+    // Student *pst = &st;
+    // // cout << &st << endl;
+    // return pst;
 }
 int fun()
 {
@@ -48,31 +46,6 @@ int main()
     Student *newStudent = make_student();
     Student st;
     cout << newStudent->age << endl;
-    // this_thread::sleep_for(chrono::seconds(3));
-    // cout << newStudent->age << endl;
-
-    // newStudent.id = 12;
-    // cout << &newStudent << endl;
-
-    // int a = fun();
-    // cout << &a << endl;
-
-    // char name[100];
-    // int id, age;
-    // cin >> id >> age;
-    // getchar();
-    // cin.getline(name, 100);
-    // Student *mukta = new Student(id, age, name);
-    // Student *proma = new Student();
-    // proma->age = 23;
-    // proma->id = 637;
-    // strcpy(proma->name, "Proma");
-    // compare_student(mukta, proma);
-    // Student *younger = compare_student(mukta, proma);
-    // cout << younger->name << " is Younger" << endl;
-
-    // cout
-    //     << (*mukta).id << " "
-    //     << (*mukta).age << " "
-    //     << (*mukta).name << endl;
+    this_thread::sleep_for(chrono::seconds(3));
+    cout << newStudent->age << endl;
 }
