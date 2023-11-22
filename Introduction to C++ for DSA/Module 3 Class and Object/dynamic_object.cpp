@@ -13,17 +13,12 @@ public:
         this->gpa = gpa;
     }
 };
-Student *fun()
-{
-    Student *mukta = new Student(33, 17, 3.20);
-    return mukta;
-}
+
 int main()
 {
-    Student *ans = fun();
-    cout << ans->roll << " " << ans->cls << " " << ans->gpa << endl;
-    delete ans;
-    cout << ans->roll << " " << ans->cls << " " << ans->gpa << endl;
+    // Student proma(33, 17, 4.20);
+    Student *proma = new Student(33, 17, 4.20);
+    cout << proma->roll << " " << proma->cls << " " << proma->gpa << endl;
 
     return 0;
 }
