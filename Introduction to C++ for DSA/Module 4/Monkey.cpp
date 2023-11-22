@@ -1,28 +1,40 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <algorithm> // for sort function
 using namespace std;
+
 int main()
 {
-    char name[100];
-    cin >> n;
-    int a[n];
-    for (int i = 0; i < n; i++)
+    string line;
+
+    // Read input until EOF
+    while (getline(cin, line))
     {
-        cin >> a[i];
+        // Iterate over each character in the line
+        for (char &c : line)
+        {
+            // Check if the character is a lowercase letter
+            if (isalpha(c) && islower(c))
+            {
+                // Convert the character to lowercase
+                c = tolower(c);
+            }
+            else
+            {
+                // If it's not a lowercase letter, replace it with a space
+                c = ' ';
+            }
+        }
+
+        // Remove extra spaces
+        line.erase(remove_if(line.begin(), line.end(), ::isspace), line.end());
+
+        // Sort the line in alphabetic order
+        sort(line.begin(), line.end());
+
+        // Print the result
+        cout << line << endl;
     }
-    sort(a, a + n); // ascending
-    for (int i = 0; i < n; i++)
-    {
-        cout << a[i] << " ";
-    }
-    cout << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
-    sort(a, a + n, greater<int>()); // descending
-    for (int i = 0; i < n; i++)
-    {
-        cout << a[i] << " ";
-    }
+
     return 0;
 }
