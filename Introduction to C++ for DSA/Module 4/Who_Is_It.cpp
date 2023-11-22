@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Student
+class Student
 {
+public:
     int id;
     string name;
     char section;
