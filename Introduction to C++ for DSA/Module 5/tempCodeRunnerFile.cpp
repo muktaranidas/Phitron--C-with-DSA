@@ -1,3 +1,2 @@
 
-        cout << s[i] << endl;
-    }
+    // while(ss>>word)
