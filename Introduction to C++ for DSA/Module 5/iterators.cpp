@@ -4,9 +4,7 @@ int main()
 {
     string s;
     // string::iterator it;
-
     cin >> s;
-
     // for (int i = 0; i < s.size(); i++)
     // {
     //     cout << s[i] << endl;
