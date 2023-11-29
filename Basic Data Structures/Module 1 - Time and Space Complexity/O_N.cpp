@@ -5,12 +5,12 @@ int main()
     int n;
     cin >> n;
     int a[n];
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) // O(N)
     {
         cin >> a[i];
     }
     int s = 0;
-    for (int i = 0; i < n; i += 2)
+    for (int i = 0; i < n; i += 2) // O(N)
     {
         // if (i % 2 == 0)
         // {
