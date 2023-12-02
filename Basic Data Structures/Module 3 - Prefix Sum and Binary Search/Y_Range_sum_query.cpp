@@ -14,6 +14,7 @@ int main()
         int l, r;
         cin >> l >> r;
         l--;
+
         r--;
         int sum = 0;
         for (int i = l; i <= r; i++)
